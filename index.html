@@ -3,17 +3,27 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="description" content="Effective Solutions for Your Business"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap"
-        rel="stylesheet">
+  <!--suppress JSUnresolvedLibraryURL -->
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+  />
   <link rel="stylesheet" href="./css/styles.css"/>
   <title>WebStudio</title>
 </head>
 <body>
 <header class="page-header">
   <div class="container">
-    <nav>
+    <nav class="navigation">
       <a href="./index.html" class="link logo">Web<span class="logo-main">Studio</span></a>
       <ul class="list menu">
         <li><a class="link menu-item" href="./index.html">Studio</a></li>
@@ -39,32 +49,32 @@
     </div>
   </section>
 
-  <section id="business-qualities">
+  <section class="section section-business-qualities" id="business-qualities">
     <div class="container">
       <h2 class="visually-hidden">Business Qualities</h2>
-      <ul class="list">
-        <li>
+      <ul class="list qualities">
+        <li class="quality">
           <h3 class="quality-name">Strategy</h3>
           <p class="quality-description">
             Our goal is to identify the business problem to walk away with the
             perfect and creative solution.
           </p>
         </li>
-        <li>
+        <li class="quality">
           <h3 class="quality-name">Punctuality</h3>
           <p class="quality-description">
             Bring the key message to the brand's audience for the best price
             within the shortest possible time.
           </p>
         </li>
-        <li>
+        <li class="quality">
           <h3 class="quality-name">Diligence</h3>
           <p class="quality-description">
             Research and confirm brands that present the strongest digital
             growth opportunities and minimize risk.
           </p>
         </li>
-        <li>
+        <li class="quality">
           <h3 class="quality-name">Technologies</h3>
           <p class="quality-description">
             Design practice focused on digital experiences. We bring forth a
@@ -75,11 +85,11 @@
     </div>
   </section>
 
-  <section id="section what-are-we-doing">
+  <section class="section section-what-are-we-doing" id="what-are-we-doing">
     <div class="container">
       <h2 class="section-name">What are we doing</h2>
-      <ul class="list">
-        <li>
+      <ul class="list doings">
+        <li class="example">
           <img
               src="./images/img_1.jpg"
               alt="Monitor"
@@ -87,7 +97,7 @@
               height="300"
           />
         </li>
-        <li>
+        <li class="example">
           <img
               src="./images/img_2.jpg"
               alt="Chat on a smartphone"
@@ -95,7 +105,7 @@
               height="300"
           />
         </li>
-        <li>
+        <li class="example">
           <img
               src="./images/img_3.jpg"
               alt="Smartphone in a hand"
@@ -110,46 +120,50 @@
   <section class="section section-our-team" id="our-team">
     <div class="container">
       <h2 class="section-name">Our team</h2>
-      <ul class="list employees">
+      <ul class="list team">
         <li class="team-member">
-          <img
+          <img class="image"
               src="./images/team_card_1.jpg"
               alt="Mark Guerrero"
               width="264"
-              height="260"
           />
-          <h3 class="employee-name">Mark Guerrero</h3>
-          <p class="position">Product Designer</p>
+          <div class="container-team-member">
+            <h3 class="employee-name">Mark Guerrero</h3>
+            <p class="position">Product Designer</p>
+          </div>
         </li>
         <li class="team-member">
-          <img
+          <img class="image"
               src="./images/team_card_2.jpg"
               alt="Tom Ford"
               width="264"
-              height="260"
           />
-          <h3 class="employee-name">Tom Ford</h3>
-          <p class="position">Frontend Developer</p>
+          <div class="container-team-member">
+            <h3 class="employee-name">Tom Ford</h3>
+            <p class="position">Frontend Developer</p>
+          </div>
         </li>
         <li class="team-member">
-          <img
+          <img class="image"
               src="./images/team_card_3.jpg"
               alt="Camila Garcia"
               width="264"
-              height="260"
           />
-          <h3 class="employee-name">Camila Garcia</h3>
-          <p class="position">Marketing</p>
+          <div class="container-team-member">
+            <h3 class="employee-name">Camila Garcia</h3>
+            <p class="position">Marketing</p>
+          </div>
         </li>
         <li class="team-member">
-          <img
+          <img class="image"
               src="./images/team_card_4.jpg"
               alt="Daniel Wilson"
               width="264"
-              height="260"
           />
-          <h3 class="employee-name">Daniel Wilson</h3>
-          <p class="position">UI Designer</p>
+          <div class="container-team-member">
+            <h3 class="employee-name">Daniel Wilson</h3>
+            <p class="position">UI Designer</p>
+          </div>
         </li>
       </ul>
     </div>
