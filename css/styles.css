@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   --iris: #4d5ae5;
   --ocean: #404bbf;
@@ -28,14 +34,45 @@
   --color-dark-background: var(--navy-blue);
   --color-modal-background: var(--dairy);
   --color-modal-overlay: var(--navy-blue-modal);
+
+  --font-main: "Roboto", sans-serif;
+  --font-logo: "Raleway", sans-serif;
 }
 
 body {
   background-color: var(--color-white-background);
   color: var(--color-text);
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-main);
   line-height: 1.5;
   letter-spacing: 0.02em;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+li{
+  object-fit: contain;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 .link {
@@ -47,6 +84,20 @@ body {
   list-style: none;
 }
 
+.container{
+  /*display: flex;
+  flex-basis: 1158px;*/
+  width: 1158px;
+}
+
+.page-header .container{
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid var(--color-accent);
+  padding: 0 156px;
+  justify-content: space-between;
+}
+
 .link:hover,
 .link:focus,
 .link.menu-item:hover,
@@ -56,7 +107,7 @@ body {
 
 .link.logo {
   color: var(--color-primary-brand);
-  font-family: "Raleway", sans-serif;
+  font-family: var(--font-logo);
   font-size: 18px;
   font-weight: 800;
   letter-spacing: 0.03em;
@@ -83,21 +134,31 @@ body {
   letter-spacing: 0.02em;
 }
 
-.section-hero {
+.section-hero{
   background-color: var(--color-dark-background);
+  padding: 188px 0 188px 0;
 }
 
-.section-our-team{
-  background-color: var(--color-light);
-}
-
-h1.title {
+.section-hero .title {
+  width: 496px;
   color: var(--color-text-light);
   font-size: 56px;
   line-height: 1.07;
   text-align: center;
   font-weight: 700;
   letter-spacing: 0.02em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-hero .button{
+  margin-top: 48px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-our-team{
+  background-color: var(--color-light);
 }
 
 .section-name {
@@ -106,12 +167,20 @@ h1.title {
   font-weight: 700;
   line-height: 1.11;
   letter-spacing: 0.02em;
-  text-align: center;
   text-transform: capitalize;
 }
 
-.section-invisible-name {
-  visibility: hidden;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .button {
@@ -123,6 +192,10 @@ h1.title {
   font-weight: 500;
   letter-spacing: 0.04em;
   cursor: pointer;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
 .button:hover,
@@ -134,12 +207,21 @@ h1.title {
   background-color: var(--color-light);
   color: var(--color-primary-brand);
   cursor: pointer;
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
+  box-shadow: none;
+  padding: 12px 24px;
 }
 
 .button.filter:hover,
 .button.filter:focus {
   background-color: var(--color-pressed-state);
   color: var(--color-text-light);
+  border: none;
+  box-shadow:
+    0 2px 2px 0 rgba(0, 0, 0, 0.12),
+    0 2px 1px 0 rgba(0, 0, 0, 0.08),
+    0 3px 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 .employee-name,
@@ -155,6 +237,11 @@ h1.title {
 
 .team-member{
   background-color: var(--color-white-background);
+  border-radius: 0 0 4px 4px;
+  box-shadow:
+    0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16),
+    0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .project a:hover,
@@ -169,5 +256,14 @@ h1.title {
 .page-footer {
   color: var(--color-light);
   background-color: var(--color-dark-background);
+  padding: 100px 0 100px 156px;
+}
+
+.page-footer .motivation-text{
+  margin-top: 16px;
+}
+
+.page-footer .motivation-text{
+  width: calc((100% - 72px) / 4);
 }
 
